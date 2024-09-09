@@ -1,10 +1,54 @@
 openapi: 3.0.3
 info:
-  title: OpenAPI schema for template walrus-template-template
+  title: OpenAPI schema for template .
 components:
   schemas:
     variables:
       type: object
+      required:
+      - controller_host
+      - controller_login
+      - controller_password
+      properties:
+        namespace_name:
+          title: Namespace Name
+          type: string
+          description: The name of the Kubernetes namespace.
+          default: netris-operator
+          x-walrus-ui:
+            group: Basic
+            order: 2
+        chart_version:
+          title: Chart Version
+          type: string
+          description: The version of the Netris Operator Helm chart.
+          default: v3.0.0
+          x-walrus-ui:
+            group: Basic
+            order: 3
+        controller_host:
+          title: Controller Host
+          type: string
+          description: The host URL of the Netris controller.
+          x-walrus-ui:
+            group: Basic
+            order: 4
+        controller_login:
+          title: Controller Login
+          type: string
+          description: The login for the Netris controller.
+          x-walrus-ui:
+            group: Basic
+            order: 5
+        controller_password:
+          title: Controller Password
+          type: string
+          description: The password for the Netris controller.
+          format: password
+          writeOnly: true
+          x-walrus-ui:
+            group: Basic
+            order: 6
       x-walrus-ui:
         groupOrder:
         - Basic
