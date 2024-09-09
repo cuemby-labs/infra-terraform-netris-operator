@@ -42,7 +42,7 @@ output "submodule" {
 }
 
 #
-# module output
+# Module output
 #
 
 output "namespace" {

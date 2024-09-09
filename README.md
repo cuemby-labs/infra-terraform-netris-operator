@@ -1,6 +1,6 @@
-# Awesome Walrus Template
+# Netris Operator Template
 
-Start here to create an awesome Walrus template.
+Terraform module which deploys Netris Operator on any kubernetes cluster.
 
 ## Usage
 
@@ -32,14 +32,14 @@ Please read our [contributing guide](./docs/CONTRIBUTING.md) if you're intereste
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.5.7 |
-| <a name="requirement_kubernetes"></a> [aws](#requirement\_kubernetes) | >= 2.23.0 |
-| <a name="requirement_helm"></a> [helm](#requirement\_random) | >= 2.11.0 |
+| <a name="requirement_kubernetes"></a> [kubernetes](#requirement\_kubernetes) | >= 2.23.0 |
+| <a name="requirement_helm"></a> [helm](#requirement\_helm) | >= 2.11.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_kubernetes"></a> [aws](#provider\_kubernetes) | >= 2.23.0 |
+| <a name="provider_kubernetes"></a> [kubernetes](#provider\_kubernetes) | >= 2.23.0 |
 | <a name="provider_helm"></a> [helm](#provider\_helm) | >= 2.11.0 |
 
 ## Modules
