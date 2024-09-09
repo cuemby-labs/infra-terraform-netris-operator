@@ -35,7 +35,7 @@ variable "namespace_name" {
 }
 
 variable "chart_version" {
-  description = "The version of the Netris Operator Helm chart."
+  description = "The version of the Netris Operator Helm release chart."
   type        = string
   default     = "v3.0.0"
 }
