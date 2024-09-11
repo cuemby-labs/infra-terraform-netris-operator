@@ -1,4 +1,4 @@
-resource "kubernetes_namespace" "netris_operator" {
+resource "kubernetes_namespace" "this" {
   metadata {
     name = var.namespace_name
   }
@@ -7,7 +7,7 @@ resource "kubernetes_namespace" "netris_operator" {
   }
 }
 
-resource "helm_release" "netris_operator" {
+resource "helm_release" "this" {
   name       = "netris-operator"
   repository = "https://netrisai.github.io/charts"
   chart      = "netris-operator"
