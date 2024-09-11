@@ -1,12 +1,3 @@
-resource "kubernetes_namespace" "this" {
-  metadata {
-    name = var.namespace_name
-  }
-  lifecycle {
-    ignore_changes = [metadata]
-  }
-}
-
 resource "helm_release" "this" {
   name       = "netris-operator"
   repository = "https://netrisai.github.io/charts"
