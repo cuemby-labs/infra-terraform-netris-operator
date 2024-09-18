@@ -8,11 +8,11 @@ Terraform module which deploys Netris Operator on any kubernetes cluster.
 module "netris_operator" {
   source  = "./path_to_module"
 
-  namespace_name       = "custom-namespace"
+  namespace_name       = "netris-operator"
   chart_version        = "v3.0.0"
   controller_host      = "https://example.netris.io"
-  controller_login     = "custom_login"
-  controller_password  = "custom_password"
+  controller_login     = "login-user"
+  controller_password  = "login-password"
 }
 
 ```
@@ -61,14 +61,13 @@ No modules.
 | <a name="input_chart_version"></a> [chart_version](#input\_chart_version) | The version of the Netris Operator Helm release chart. | `string` | `"v3.0.0"` | no |
 | <a name="input_controller_host"></a> [controller_host](#input\_controller_host) | The host URL of the Netris controller. | `string` | n/a | yes |
 | <a name="input_controller_login"></a> [controller_login](#input\_controller_login) | The login for the Netris controller. | `string` | n/a | yes |
-| <a name="input_controller_password"></a> [controller_password](#input\_controller_password) | The password for the Netris controller. | `string` | n/a | yes |
+| <a name="input_controller_password"></a> [controller_password](#input\_controller_password) | The password for the Netris controller. | `string sensitive` | n/a | yes |
 
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| <a name="output_submodule"></a> [submodule](#output\_submodule) | The message from submodule. |
 | <a name="output_walrus_environment_id"></a> [walrus\_environment\_id](#output\_walrus\_environment\_id) | The id of environment where deployed in Walrus. |
 | <a name="output_walrus_environment_name"></a> [walrus\_environment\_name](#output\_walrus\_environment\_name) | The name of environment where deployed in Walrus. |
 | <a name="output_walrus_project_id"></a> [walrus\_project\_id](#output\_walrus\_project\_id) | The id of project where deployed in Walrus. |

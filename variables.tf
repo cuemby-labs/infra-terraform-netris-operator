@@ -46,12 +46,12 @@ variable "controller_host" {
 }
 
 variable "controller_login" {
-  description = "The login for the Netris controller."
+  description = "The login user for the Netris controller."
   type        = string
 }
 
 variable "controller_password" {
-  description = "The password for the Netris controller."
+  description = "The login password for the Netris controller."
   type        = string
   sensitive   = true
 }

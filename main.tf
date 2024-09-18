@@ -1,9 +1,19 @@
-resource "helm_release" "this" {
+#
+# Netris Operator Resources
+#
+
+resource "kubernetes_namespace" "netris_operator" {
+  metadata {
+    name = var.namespace_name
+  }
+}
+
+resource "helm_release" "netris_operator" {
   name       = "netris-operator"
   repository = "https://netrisai.github.io/charts"
   chart      = "netris-operator"
   version    = var.chart_version
-  namespace  = kubernetes_namespace.netris_operator.metadata[0].name
+  namespace  = var.namespace_name
 
   set {
     name  = "controller.host"
@@ -21,12 +31,10 @@ resource "helm_release" "this" {
   }
 }
 
+#
+# Walrus Information
+#
+
 locals {
   context = var.context
-}
-
-module "submodule" {
-  source = "./modules/submodule"
-
-  message = "Hello, submodule"
 }

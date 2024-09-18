@@ -21,7 +21,7 @@ components:
         chart_version:
           title: Chart Version
           type: string
-          description: The version of the Netris Operator Helm chart.
+          description: The version of the Netris Operator Helm release chart.
           default: v3.0.0
           x-walrus-ui:
             group: Basic
@@ -36,14 +36,14 @@ components:
         controller_login:
           title: Controller Login
           type: string
-          description: The login for the Netris controller.
+          description: The login user for the Netris controller.
           x-walrus-ui:
             group: Basic
             order: 5
         controller_password:
           title: Controller Password
           type: string
-          description: The password for the Netris controller.
+          description: The login password for the Netris controller.
           format: password
           writeOnly: true
           x-walrus-ui:
