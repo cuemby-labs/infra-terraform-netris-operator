@@ -9,7 +9,7 @@ module "netris_operator" {
   source  = "./path_to_module"
 
   namespace_name       = "netris-operator"
-  chart_version        = "v3.0.0"
+  chart_version        = "4.3.1"
   controller_host      = "https://example.netris.io"
   controller_login     = "login-user"
   controller_password  = "login-password"
@@ -39,6 +39,7 @@ Please read our [contributing guide](./docs/CONTRIBUTING.md) if you're intereste
 
 | Name | Version |
 |------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.5.7 |
 | <a name="provider_kubernetes"></a> [kubernetes](#provider\_kubernetes) | >= 2.23.0 |
 | <a name="provider_helm"></a> [helm](#provider\_helm) | >= 2.11.0 |
 
