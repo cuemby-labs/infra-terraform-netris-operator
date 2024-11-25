@@ -17,17 +17,20 @@ variable "chart_version" {
 variable "controller_host" {
   description = "The host URL of the Netris controller."
   type        = string
+  default     = "https://"
 }
 
 variable "controller_login" {
   description = "The login user for the Netris controller."
   type        = string
+  default     = "admin"
 }
 
 variable "controller_password" {
   description = "The login password for the Netris controller."
   type        = string
   sensitive   = true
+  default     = ""
 }
 
 #
